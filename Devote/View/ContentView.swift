@@ -11,16 +11,12 @@ import CoreData
 struct ContentView: View {
     //MARK: - PROPERTY
     
-    
     @Environment(\.colorScheme) var colorScheme // detect color scheme // custom
     
     @AppStorage("isDarkMode") private var isDarkMode: Bool = false
     
-    
     @State var task: String = ""
     @State private var showNewTaskItem: Bool = false
-    
-    
     
     // FETCHING DATA
     @Environment(\.managedObjectContext) private var viewContext

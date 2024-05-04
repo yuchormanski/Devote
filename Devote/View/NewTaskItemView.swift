@@ -16,7 +16,7 @@ struct NewTaskItemView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State var task: String = ""
     
-    @Binding var isShowing: Bool
+    @Binding var isShowing: Bool  // идва като стойност от parent-a
     
     //Computed property защита от запис с празно поле
     // проверява дали инпут полето е празно
