@@ -38,7 +38,7 @@ struct NewTaskItemView: View {
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
-            
+        
             task = "" // clear the text field
             hideKeyboard() // hidding the keyboard. Func is imported from custom extension
             isShowing = false
@@ -61,6 +61,8 @@ struct NewTaskItemView: View {
                 
                 Button(action: {
                     addItem()
+                    feedback.impactOccurred()
+                    playSound(sound: "sound-ding", type: "mp3")
                 }, label: {
                     Spacer()
                     Text("Save".uppercased())
@@ -68,6 +70,10 @@ struct NewTaskItemView: View {
                     Spacer()
                 })
                 .disabled(isButtonDisabled)
+                .onTapGesture {
+                    isButtonDisabled ? playSound(sound: "sound-ding", type: "mp3") : nil
+                    isButtonDisabled ? haptic.notificationOccurred(.error) : haptic.notificationOccurred(.success)
+                }
                 .padding()
                 .foregroundStyle(.white)
                 //                    .background(isButtonDisabled ? .gray : .pink)
@@ -75,6 +81,7 @@ struct NewTaskItemView: View {
                 .opacity(isButtonDisabled ? 0 : 1)
                 .offset(x: isButtonDisabled ?  375 : 0, y: isButtonDisabled ? 50 : 0 )
                 .scaleEffect(isButtonDisabled ? 0 : 1)
+                
                 .cornerRadius(10)
             })//: VStack
             .padding(.horizontal)

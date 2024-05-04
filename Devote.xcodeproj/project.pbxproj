@@ -23,6 +23,7 @@
 		B35477132BE63B2D00017600 /* BlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35477122BE63B2D00017600 /* BlankView.swift */; };
 		B35477152BE64B9100017600 /* ListRowItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35477142BE64B9000017600 /* ListRowItemView.swift */; };
 		B35477172BE650B000017600 /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35477162BE650B000017600 /* CheckboxStyle.swift */; };
+		B35477192BE65C8C00017600 /* SoundPalyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35477182BE65C8C00017600 /* SoundPalyer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		B35477122BE63B2D00017600 /* BlankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankView.swift; sourceTree = "<group>"; };
 		B35477142BE64B9000017600 /* ListRowItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowItemView.swift; sourceTree = "<group>"; };
 		B35477162BE650B000017600 /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
+		B35477182BE65C8C00017600 /* SoundPalyer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPalyer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				B354770A2BE605EB00017600 /* Constant.swift */,
+				B35477182BE65C8C00017600 /* SoundPalyer.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			files = (
 				B35476EF2BE5093800017600 /* Persistence.swift in Sources */,
 				B354770F2BE61BCF00017600 /* BackgroundImageView.swift in Sources */,
+				B35477192BE65C8C00017600 /* SoundPalyer.swift in Sources */,
 				B35476E82BE5093700017600 /* ContentView.swift in Sources */,
 				B354770D2BE611DB00017600 /* HideKeyboardExtension.swift in Sources */,
 				B35477132BE63B2D00017600 /* BlankView.swift in Sources */,

@@ -39,6 +39,7 @@ struct ContentView: View {
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
         }
+        feedback.impactOccurred()
     }
     
     //MARK: - BODY
@@ -64,9 +65,15 @@ struct ContentView: View {
                             .background(
                                 Capsule().stroke(Color.white, lineWidth: 2)
                             )
+                            .onTapGesture {
+                                feedback.impactOccurred()
+                            }
+                        
                         //APPEARANCE BTN
                         Button(action: {
                             isDarkMode.toggle()
+                            feedback.impactOccurred()
+                            playSound(sound: "sound-tap", type: "mp3")
                         }, label: {
                             Image(systemName: isDarkMode ? "moon.circle.fill" : "moon.circle")
                                 .resizable()
@@ -83,6 +90,8 @@ struct ContentView: View {
                     
                     Button(action: {
                         showNewTaskItem = true
+                        feedback.impactOccurred()
+                        playSound(sound: "sound-ding", type: "mp3")
                     }, label: {
                         Image(systemName: "plus.circle")
                             .font(.system(size: 30, weight: .semibold, design: .rounded))
@@ -119,11 +128,17 @@ struct ContentView: View {
                         .frame(maxWidth: 640)
                         
                     }//: VStack
+                    //MARK: - BLUR EFFERCT
+                    .blur(radius: showNewTaskItem ? 8 : 0, opaque: false)
+                    .transition(.move(edge: .bottom))
+                    .animation(.easeOut(duration: 0.3), value: showNewTaskItem)
                 }//: VStack
                 
                 //MARK: - NEW TASK ITEM
                 if showNewTaskItem {
-                    BlankView()
+                    BlankView(
+                        backgroungColor: isDarkMode ? .black : .gray,
+                        backgroundOpacity: isDarkMode ? 0.3 : 0.5)
                         .onTapGesture {
                             withAnimation(.easeOut(duration: 0.3)) {
                                 showNewTaskItem = false
@@ -140,7 +155,11 @@ struct ContentView: View {
             .navigationTitle("Daily Tasks")
             .navigationBarTitleDisplayMode(.large)
             .toolbar(.hidden)
-            .background(BackgroundImageView())
+            //MARK: - BLUR EFFERCT
+            .background(
+                BackgroundImageView()
+                    .blur(radius: showNewTaskItem ? 8 : 0, opaque: false)
+            )
             .background(backgroundGradient.ignoresSafeArea(.all))
         }//: Navigation
         // will be deprecated in the future OS
