@@ -16,6 +16,13 @@
 		B35476FB2BE50ACF00017600 /* sound-ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B35476F82BE50ACF00017600 /* sound-ding.mp3 */; };
 		B35476FC2BE50ACF00017600 /* sound-rise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B35476F92BE50ACF00017600 /* sound-rise.mp3 */; };
 		B35476FD2BE50ACF00017600 /* sound-tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B35476FA2BE50ACF00017600 /* sound-tap.mp3 */; };
+		B354770B2BE605EB00017600 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B354770A2BE605EB00017600 /* Constant.swift */; };
+		B354770D2BE611DB00017600 /* HideKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B354770C2BE611DB00017600 /* HideKeyboardExtension.swift */; };
+		B354770F2BE61BCF00017600 /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B354770E2BE61BCF00017600 /* BackgroundImageView.swift */; };
+		B35477112BE623E600017600 /* NewTaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35477102BE623E600017600 /* NewTaskItemView.swift */; };
+		B35477132BE63B2D00017600 /* BlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35477122BE63B2D00017600 /* BlankView.swift */; };
+		B35477152BE64B9100017600 /* ListRowItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35477142BE64B9000017600 /* ListRowItemView.swift */; };
+		B35477172BE650B000017600 /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35477162BE650B000017600 /* CheckboxStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +37,13 @@
 		B35476F92BE50ACF00017600 /* sound-rise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-rise.mp3"; sourceTree = "<group>"; };
 		B35476FA2BE50ACF00017600 /* sound-tap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-tap.mp3"; sourceTree = "<group>"; };
 		B35477052BE50C0800017600 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B354770A2BE605EB00017600 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		B354770C2BE611DB00017600 /* HideKeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardExtension.swift; sourceTree = "<group>"; };
+		B354770E2BE61BCF00017600 /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
+		B35477102BE623E600017600 /* NewTaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskItemView.swift; sourceTree = "<group>"; };
+		B35477122BE63B2D00017600 /* BlankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankView.swift; sourceTree = "<group>"; };
+		B35477142BE64B9000017600 /* ListRowItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowItemView.swift; sourceTree = "<group>"; };
+		B35477162BE650B000017600 /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +120,10 @@
 			isa = PBXGroup;
 			children = (
 				B35476E72BE5093700017600 /* ContentView.swift */,
+				B354770E2BE61BCF00017600 /* BackgroundImageView.swift */,
+				B35477102BE623E600017600 /* NewTaskItemView.swift */,
+				B35477122BE63B2D00017600 /* BlankView.swift */,
+				B35477142BE64B9000017600 /* ListRowItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -122,6 +140,7 @@
 		B35477022BE50B5100017600 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				B354770C2BE611DB00017600 /* HideKeyboardExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -129,6 +148,7 @@
 		B35477032BE50B5F00017600 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				B354770A2BE605EB00017600 /* Constant.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -136,6 +156,7 @@
 		B35477042BE50B9700017600 /* Style */ = {
 			isa = PBXGroup;
 			children = (
+				B35477162BE650B000017600 /* CheckboxStyle.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -214,9 +235,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B35476EF2BE5093800017600 /* Persistence.swift in Sources */,
+				B354770F2BE61BCF00017600 /* BackgroundImageView.swift in Sources */,
 				B35476E82BE5093700017600 /* ContentView.swift in Sources */,
+				B354770D2BE611DB00017600 /* HideKeyboardExtension.swift in Sources */,
+				B35477132BE63B2D00017600 /* BlankView.swift in Sources */,
+				B354770B2BE605EB00017600 /* Constant.swift in Sources */,
+				B35477152BE64B9100017600 /* ListRowItemView.swift in Sources */,
 				B35476F22BE5093800017600 /* Devote.xcdatamodeld in Sources */,
 				B35476E62BE5093700017600 /* DevoteApp.swift in Sources */,
+				B35477172BE650B000017600 /* CheckboxStyle.swift in Sources */,
+				B35477112BE623E600017600 /* NewTaskItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +386,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -388,7 +416,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
