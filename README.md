@@ -4,4 +4,5 @@
 ## Checkbox style
 ## @Binding - passing state to children
 ## Background blur effecrt
+## Hide keyboard on action
 
